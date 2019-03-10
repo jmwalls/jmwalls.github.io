@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="navbar.css">
+
+  <!--<meta charset="utf-8"/>-->
+  <title>Calendar</title>
+</head>
+<body>
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">Menu <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <div id="calendar_ids">
+        </div>
+        <hr>
+        <div id="controls">
+          <a id="signout_button">Sign out</a>
+          <a id="authorize_button">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="calendar"></div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <script src="scripts.js"></script>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+</body>
+</html>
