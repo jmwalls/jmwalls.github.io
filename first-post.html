@@ -6,7 +6,7 @@
         <meta name="author" content="Jeff Walls">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>A Blog | Jeff Walls</title>
+        <title>A Blog | First Post</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -404,45 +404,164 @@ article .meta a.comments_btn:hover {
         </header>
 
         <div id="wrap">
-<div class="container index">
+<div class="container post">
+    <article>
+        <header>
+            <h1>First Post</h1>
+            <time datetime="article.date.isoformat()" pubdate>Thu 05 November 2020</time>
+        </header>
 
-  <article>
-    <header>
-      <h2><a href="/first-post.html">First Post</a></h2>
-      <time datetime="" title="2020-11-05T20:05:00-08:00" pubdate>Thu 05 November 2020</time>
-    </header>
-
-    <div class="article_content">
-      <p>One of my 2020 New Year's resolutions was to start a blog. I'm hoping blogging
+        <div class="article_content">
+            <p>One of my 2020 New Year's resolutions was to start a blog. I'm hoping blogging
 motivates me to try out some new ideas and follow through enough to write a few
 words about the experience. With just weeks remaining in the year, it's time to
-make good on my resolution …</p>
-    </div>
+make good on my resolution. Let's see what happens.</p>
+<p>After shopping around a bit, I settled on using
+<a href="https://blog.getpelican.com/">Pelican</a> to generate the static content here.
+Pelican ticked a few important boxes: Python, presence of a user community, and
+plugin extensible (e.g., math rendering and Jupyter notebooks).</p>
+<p>How does the  math formatting look?</p>
+<div class="math">$$
+e^{i \pi} + 1 = 0
+$$</div>
+<p>Code blocks?</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Recursively compute nth element of the Fibonacci sequence.</span>
 
-    <div class="meta">
-      <div>
-        <a href="/first-post.html" class="read_more">Read more &#8594;</a>
-      </div>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: (int) query element</span>
 
-      <div>
-            <a href="/tag/blogging.html" class="tag">blogging</a>
-      </div>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (int) nth element</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
 
-    </div>
 
-  </article>
-  <div class="separator"></div>
+<p>I've borrowed themes/plugins from others, so I'll continue to borrow forward and
+post the source on <a href="https://github.com/jmwalls/blog">GitHub</a>.</p>
+<p>And so, with that, stay classy, internet.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
 
-  <nav class="pagination row">
-    <div class="col-xs-6 left">
-    </div>
-    <div class="col-xs-6 right">
-    </div>
-  </nav>
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
 
-  </div>
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' }, Macros: {} }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="/tag/blogging.html" class="tag">blogging</a>
+            </div>
+        </div>
+    </article>
+
 
 </div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>
 
         </div>
 <!--
