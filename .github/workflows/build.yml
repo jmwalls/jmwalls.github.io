@@ -1,0 +1,23 @@
+name: Build and deploy site
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v4
+              with:
+                node-version: current
+            - name: Build site
+              run: |
+                  npm ci
+                  npm run build
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3.8.0
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: dist
+                  publish_branch: gh-pages
