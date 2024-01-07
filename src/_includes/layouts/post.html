@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<article>
+  <div class="text-left pb-3">
+    <h1>{{ title }}</h1>
+    <time datetime="{{ date | dateToIso }}"><em>{{ date | formatDateStr }}</em><time>
+  </div>
+
+  <div>
+    {{ content | safe }}
+  </div>
+</article>
+{% endblock %}
