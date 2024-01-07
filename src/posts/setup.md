@@ -18,7 +18,7 @@ rolling. 11ty also includes many plugins, for example, syntax highlighting (see
 below). In the spirit of keeping it simple, styling is vanilla
 [Bootstrap](https://getbootstrap.com/) CSS.
 
-11ty is uses PrizmJS under the hood to provide styling for code blocks including
+11ty uses PrizmJS under the hood to provide styling for code blocks including
 syntax highlighting.
 
 ```py
@@ -33,4 +33,4 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
-You can view the site code on my [GitHub]().
+You can view the site code on my [GitHub](https://github.com/jmwalls/jmwalls.github.io).
