@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" aria-label="Jeff Walls - home">Jeff Walls</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+                Home
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+                About
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <div class="container-lg m-auto pt-3">
+      <main tabindex="-1" id="main-content">
+        
+<article>
+  <div class="text-left pb-3">
+    <h1>Setting up a site</h1>
+    <time datetime="2024-01-07T00:00:00.000Z"><em>Sun, Jan 7, 2024</em><time>
+  </div>
+
+  <div>
+    <p>For years, I've wanted to spend more time writing--to practice and to document.
+With the new year and recent inspiration from the newly updated
+<a href="https://litlab.stanford.edu/techne/new-litlab-website/">LitLab</a> site, I'm
+finally kicking off a personal site in attempt to do so.</p>
+<p>I'm not a front-end developer, so this site is set up to be simple to build and
+maintain. The static content here is generated with
+<a href="https://www.11ty.dev/">11ty</a> (as used with the LitLab site). 11ty has a low
+learning curve, is easy to customize, and has a fairly large user community and
+developer support. I found <a href="https://learneleventyfromscratch.com/">this
+tutorial</a> particularly helpful to get
+rolling. 11ty also includes many plugins, for example, syntax highlighting (see
+below). In the spirit of keeping it simple, styling is vanilla
+<a href="https://getbootstrap.com/">Bootstrap</a> CSS.</p>
+<p>11ty is uses PrizmJS under the hood to provide styling for code blocks including
+syntax highlighting.</p>
+<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Recursively compute nth element of the Fibonacci sequence.
+
+    @param n: (int) query element
+    @returns (int) nth element
+    """</span>
+    <span class="token keyword">if</span> n <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> n
+    <span class="token keyword">return</span> fibonacci<span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> fibonacci<span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span></code></pre>
+<p>You can view the site code on my <a href="">GitHub</a>.</p>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+</html>
