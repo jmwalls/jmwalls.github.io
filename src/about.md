@@ -3,7 +3,7 @@ title: "About"
 layout: "layouts/about.html"
 ---
 
-{% picture "/images/jeff.png", "Hanging out in Yosemite" %}
+{% picture "/images/jmw_about.png", "Hanging out in Yosemite" %}
 
 Hi! I'm an engineer living in the San Francisco Bay Area. I enjoy pushing around
 data, building models, and making predictions. Over the years, I've worked on

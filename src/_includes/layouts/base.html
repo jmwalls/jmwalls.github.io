@@ -1,3 +1,9 @@
+{# Set the page title to include the site name, unless we're on the home page.#}
+{% set pageTitle = site.name + "--" + title %}
+{% if site.name === title %}
+  {% set pageTitle = title %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/app.css' | url }}" />
+    <link rel="icon" href='data:image/svg+xml,{% include "partials/icon.svg" %}' />
+    <title>{{ pageTitle }}</title>
   </head>
   <body>
     {% include "partials/site-head.html" %}
