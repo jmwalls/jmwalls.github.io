@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="{{ '/app.css' | url }}" />
     <link rel="icon" href='data:image/svg+xml,{% include "partials/icon.svg" %}' />
     <title>{{ pageTitle }}</title>
+    {# The 'head' frontmatter list allows us to add header material, e.g., to
+    load additional scripts/stylesheets for a particular post. #}
+    {% if head %}
+      {% for entry in head %}
+        {{ entry | safe }}
+      {% endfor %}
+    {% endif %}
   </head>
   <body>
     {% include "partials/site-head.html" %}

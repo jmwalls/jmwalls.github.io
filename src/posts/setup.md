@@ -6,7 +6,7 @@ date: '2024-01-07'
 For years, I've wanted to spend more time writing--to practice and to document.
 With the new year and recent inspiration from the newly updated
 [LitLab](https://litlab.stanford.edu/techne/new-litlab-website/) site, I'm
-finally kicking off a personal site in attempt to do so.
+finally kicking off a personal site in an attempt to do so.
 
 I'm not a front-end developer, so this site is set up to be simple to build and
 maintain. The static content here is generated with

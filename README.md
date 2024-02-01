@@ -22,5 +22,5 @@ date.
 
 * Add next/previous links to posts
 * Add footer--include github and RSS feed links
-* Use cards to present posts?
 * Add tags to posts?
+* Use cards to present posts?
