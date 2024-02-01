@@ -45,6 +45,7 @@ module.exports = config => {
 
     // Pass through images
     config.addPassthroughCopy('./src/images/');
+    config.addPassthroughCopy('./src/assets/');
 
     // Returns a collection of blog posts in reverse date order
     config.addCollection("posts", function(collection) {
