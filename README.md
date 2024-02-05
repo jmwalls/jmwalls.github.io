@@ -20,7 +20,7 @@ date.
 
 ### TODOs
 
+* RSS feed (link in footer)
 * Add next/previous links to posts
-* Add footer--include github and RSS feed links
 * Add tags to posts?
 * Use cards to present posts?

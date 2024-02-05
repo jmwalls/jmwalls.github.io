@@ -22,15 +22,21 @@
       {% endfor %}
     {% endif %}
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     {% include "partials/site-head.html" %}
-    <div class="container-lg m-auto pt-3">
+    <div class="container-lg pt-3">
       <main tabindex="-1" id="main-content">
         {% block content %}
         <p>Placeholder content...</p>
         {% endblock %}
       </main>
     </div>
+    <footer class="footer container-lg mt-auto py-3">
+      <div class="text-end">
+        <hr>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+      <div>
+    </footer>
     <script type="text/javascript" src="{{ '/app.js' | url }}"></script>
   </body>
 </html>

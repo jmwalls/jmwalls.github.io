@@ -14,7 +14,7 @@ module.exports = config => {
     config.addShortcode("picture", function(path, caption) {
         return `<div class="mx-auto text-center">
           <figure class="figure">
-            <img class="rounded" src=${path} alt=${caption}>
+            <img class="rounded" src=${path} alt=${caption} style="max-width: 100%; height: auto;">
             <figcaption class="figure-caption text-start">${caption}</figcaption>
           </figure>
           </div>`;
